@@ -446,6 +446,8 @@ class Github {
             console.log(`Pull request created: ${resp.data.html_url}`);
             return resp.data.html_url;
 
+            const prNumber = resp.data.number;
+
 						// Labeling the PR
 						await this.octokit.issues.addLabels({
 							...this.unPackRepo(),
@@ -455,7 +457,6 @@ class Github {
 
             // This is stupid, but it's one of the only way to trigger the CI checks
             console.log('Close/reopen the PR to trigger the CI checks.');
-            const prNumber = createResp.data.number;
             await this.octokit.pulls.update({
               ...this.unPackRepo(),
               pull_number: prNumber,
