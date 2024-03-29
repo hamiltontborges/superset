@@ -28,5 +28,4 @@ export { contributionOperator } from './contributionOperator';
 export { prophetOperator } from './prophetOperator';
 export { boxplotOperator } from './boxplotOperator';
 export { flattenOperator } from './flattenOperator';
-export { rankOperator } from './rankOperator';
 export * from './utils';
