@@ -110,5 +110,6 @@ release.json
 messages.mo
 
 docker/requirements-local.txt
+docker/.env-local
 
 cache/
